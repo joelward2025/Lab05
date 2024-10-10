@@ -8,11 +8,11 @@
 import Foundation
 
 struct Knight {
-    var level: Int = 1
-    var goldCoins: Int = 0
-    var hitPoints: Int
+    private(set) var level: Int = 1
+    private(set) var goldCoins: Int = 0
+    private(set) var hitPoints: Int
     private(set) var health: Int
-    var armor: Armor
+    private(set) var armor: Armor
     
     init(hitPoints: Int, armorMaterial: String, armorHitPoints: Int) {
         self.hitPoints = hitPoints
@@ -25,8 +25,8 @@ struct Knight {
     mutating func rest() -> Void {}
     
     struct Armor {
-       var material: String
-        var hitPoints: Int
+        private(set) var material: String
+        private(set) var hitPoints: Int
         private(set) var health: Int
     }
 }
